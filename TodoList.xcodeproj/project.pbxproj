@@ -14,7 +14,6 @@
 		07183E9E20BE8D0200E34CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07183E9C20BE8D0200E34CAC /* LaunchScreen.storyboard */; };
 		0720AC3A20DD1F07002B0760 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0720AC3920DD1F07002B0760 /* CategoryTableViewController.swift */; };
 		076228D620DA411A00B4E81E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076228D420DA411A00B4E81E /* DataModel.xcdatamodeld */; };
-		7AE975D12957FC0C15B16B64 /* Pods_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB467E92B51CB066497B67C8 /* Pods_TodoList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +26,6 @@
 		07183E9F20BE8D0200E34CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0720AC3920DD1F07002B0760 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		076228D520DA411A00B4E81E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		846FE55EA73F4DBC57565475 /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
-		C4D160001C9325E011211959 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
-		FB467E92B51CB066497B67C8 /* Pods_TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AE975D12957FC0C15B16B64 /* Pods_TodoList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +44,6 @@
 			children = (
 				07183E9220BE8D0000E34CAC /* TodoList */,
 				07183E9120BE8D0000E34CAC /* Products */,
-				502C2F85EC0F277B20FCB806 /* Pods */,
-				EB37733EABC818264AFA2658 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,23 +100,6 @@
 				07183E9C20BE8D0200E34CAC /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		502C2F85EC0F277B20FCB806 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				846FE55EA73F4DBC57565475 /* Pods-TodoList.debug.xcconfig */,
-				C4D160001C9325E011211959 /* Pods-TodoList.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EB37733EABC818264AFA2658 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FB467E92B51CB066497B67C8 /* Pods_TodoList.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,12 +361,14 @@
 		};
 		07183EA320BE8D0200E34CAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846FE55EA73F4DBC57565475 /* Pods-TodoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhrajyoti.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -400,12 +378,14 @@
 		};
 		07183EA420BE8D0200E34CAC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4D160001C9325E011211959 /* Pods-TodoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhrajyoti.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
