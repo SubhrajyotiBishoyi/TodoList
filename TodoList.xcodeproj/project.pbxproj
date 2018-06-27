@@ -13,7 +13,8 @@
 		07183E9B20BE8D0200E34CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07183E9A20BE8D0200E34CAC /* Assets.xcassets */; };
 		07183E9E20BE8D0200E34CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07183E9C20BE8D0200E34CAC /* LaunchScreen.storyboard */; };
 		0720AC3A20DD1F07002B0760 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0720AC3920DD1F07002B0760 /* CategoryTableViewController.swift */; };
-		076228D620DA411A00B4E81E /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 076228D420DA411A00B4E81E /* DataModel.xcdatamodeld */; };
+		07E4BF4520DE457D00270653 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4BF4420DE457D00270653 /* Category.swift */; };
+		07E4BF4720DE458800270653 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E4BF4620DE458800270653 /* Items.swift */; };
 		75FEF53B8F894B7BECAB51CB /* Pods_TodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF716FA7CB86A2BB6C1E932E /* Pods_TodoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,8 @@
 		07183E9D20BE8D0200E34CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07183E9F20BE8D0200E34CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0720AC3920DD1F07002B0760 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		076228D520DA411A00B4E81E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		07E4BF4420DE457D00270653 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		07E4BF4620DE458800270653 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		46E6AC832265D78257B93E88 /* Pods-TodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.release.xcconfig"; sourceTree = "<group>"; };
 		74816477FB2400DFB744C51F /* Pods-TodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoList/Pods-TodoList.debug.xcconfig"; sourceTree = "<group>"; };
 		EF716FA7CB86A2BB6C1E932E /* Pods_TodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +80,8 @@
 		0727B02C20C27BAE00421696 /* Data Modal */ = {
 			isa = PBXGroup;
 			children = (
-				076228D420DA411A00B4E81E /* DataModel.xcdatamodeld */,
+				07E4BF4420DE457D00270653 /* Category.swift */,
+				07E4BF4620DE458800270653 /* Items.swift */,
 			);
 			path = "Data Modal";
 			sourceTree = "<group>";
@@ -241,8 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				07183E9620BE8D0000E34CAC /* TodoListTableViewController.swift in Sources */,
-				076228D620DA411A00B4E81E /* DataModel.xcdatamodeld in Sources */,
+				07E4BF4520DE457D00270653 /* Category.swift in Sources */,
 				07183E9420BE8D0000E34CAC /* AppDelegate.swift in Sources */,
+				07E4BF4720DE458800270653 /* Items.swift in Sources */,
 				0720AC3A20DD1F07002B0760 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,8 +393,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T7FT58CCB;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhrajyoti.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -404,8 +412,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T7FT58CCB;
 				INFOPLIST_FILE = TodoList/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.subhrajyoti.TodoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -435,19 +447,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		076228D420DA411A00B4E81E /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				076228D520DA411A00B4E81E /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 076228D520DA411A00B4E81E /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 07183E8820BE8D0000E34CAC /* Project object */;
 }
